@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Clazz1{
 
     @Save
-    static String znak1 = "парметр100";
+    static String znak1 = "1111";
     static String znak2 = "Значение2";
     @Save
     static String znak3 = "парметр96";
