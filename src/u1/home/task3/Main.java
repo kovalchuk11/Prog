@@ -20,6 +20,7 @@ public class Main {
     public static void write() throws NoSuchFieldException, IllegalAccessException {
         sb = new StringBuilder();
         Field[] publicFields = cls.getDeclaredFields();
+
         Clazz1 obj = new Clazz1();
         for (Field fil : publicFields) {
             if (fil.isAnnotationPresent(Save.class)) {
