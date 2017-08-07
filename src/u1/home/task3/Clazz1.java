@@ -9,6 +9,7 @@ public class Clazz1{
     static String znak2 = "Значение2";
     @Save
     static String znak3 = "парметр96";
+    @Save
     static String znak4 = "Значение4";
 
 
