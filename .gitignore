@@ -2,6 +2,8 @@
 *.class
 target/
 out/
+.idea/
+*.iml
 
 # Log file
 *.log
