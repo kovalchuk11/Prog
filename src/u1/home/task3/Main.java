@@ -61,6 +61,7 @@ public class Main {
                 field.set(obj2, two);
                 System.out.println("Записалось значением с файла: " + field.get(obj2));
             } catch (Exception ex) {
+                ex.printStackTrace();
                 System.out.println(ex.getMessage() + " у тебя ошибка 1");
             }
             System.out.println("==");
