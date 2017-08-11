@@ -22,9 +22,9 @@ import java.util.Date;
 public class SeachXML {
     public static void main(String[] args) {
         TrainList trainList = new TrainList();
-        String file = "C:\\Users\\I\\Documents\\Train.xml";
-        trainList.addList(new Train(1, "Mosk", "Kiiv", "19.12.2017", "18:39"));
-        trainList.addList(new Train(2, "Mosk", "Kiiv", "18.12.2017", "18:39"));
+        String file = "C:\\Users\\I\\Documents\\progKiev\\Prog\\src\\u2Home\\task1\\Trains.xml";
+        trainList.addList(new Train(1, "Ніжин", "Kiiv", "19.12.2017", "18:39"));
+        trainList.addList(new Train(2, "Хмільник", "Kiiv", "18.12.2017", "18:39"));
         trainList.addList(new Train(3, "Mosk", "Kiiv", "19.12.2017", "15:39"));
         convertObjectToXml(trainList, file);
         try {
@@ -50,7 +50,7 @@ public class SeachXML {
         XPath xPath = pathFactory.newXPath();
         XPathExpression xPathExpression = xPath.compile("trains/train[date = '19.12.2017']");
         NodeList nodes = (NodeList) xPathExpression.evaluate(document, XPathConstants.NODESET);
-        System.out.println("с 15:00 до 19:00");
+        System.out.println("с 15:00 до 19:00, 19.12.2017");
         for (int i = 0; i < nodes.getLength(); i++) {
             Node n = nodes.item(i);
             Element element = (Element) n;

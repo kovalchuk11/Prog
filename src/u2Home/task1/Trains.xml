@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<trains>
+    <train id="1">
+        <from>Ніжин</from>
+        <to>Kiiv</to>
+        <date>19.12.2017</date>
+        <departure>18:39</departure>
+    </train>
+    <train id="2">
+        <from>Хмільник</from>
+        <to>Kiiv</to>
+        <date>18.12.2017</date>
+        <departure>18:39</departure>
+    </train>
+    <train id="3">
+        <from>Mosk</from>
+        <to>Kiiv</to>
+        <date>19.12.2017</date>
+        <departure>15:39</departure>
+    </train>
+</trains>

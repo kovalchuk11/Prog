@@ -65,15 +65,4 @@ public class Train {
     public void setDeparture(String departure) {
         this.departure = departure;
     }
-
-//    @Override
-//    public String toString() {
-//        return "train{" +
-//                "id=" + id +
-//                ", from='" + from + '\'' +
-//                ", to=" + to +
-//                ", date='" + date + '\'' +
-//                ", departure='" + departure + '\'' +
-//                '}';
-//    }
 }
