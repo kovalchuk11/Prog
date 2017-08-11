@@ -7,7 +7,6 @@ import org.xml.sax.SAXException;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -19,15 +18,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
+
 public class SeachXML {
     public static void main(String[] args) {
-        String fileName = "C:\\Users\\I\\Documents\\progKiev\\Prog\\src\\u2Home\\task1\\Trains.xml";
+        TrainList trainList = new TrainList();
         String file = "C:\\Users\\I\\Documents\\Train.xml";
-        Train train = new Train(2, "Mosk", "Kiiv", "12.26.2017", "14:30");
-        convertObjectToXml(train, file);
+        trainList.addList(new Train(1, "Mosk", "Kiiv", "19.12.2017", "18:39"));
+        trainList.addList(new Train(2, "Mosk", "Kiiv", "18.12.2017", "18:39"));
+        trainList.addList(new Train(3, "Mosk", "Kiiv", "19.12.2017", "15:39"));
+        convertObjectToXml(trainList, file);
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse(fileName);
+            Document document = documentBuilder.parse(file);
 
             try {
                 printCost(document);
@@ -60,15 +62,16 @@ public class SeachXML {
         }
     }
     // сохраняем объект в XML файл
-    private static void convertObjectToXml(Train train, String filePath) {
+    private static void convertObjectToXml(TrainList train, String file) {
         try {
-            JAXBContext context = JAXBContext.newInstance(Train.class);
+            File file1 = new File(file);
+            JAXBContext context = JAXBContext.newInstance(TrainList.class);
             Marshaller marshaller = context.createMarshaller();
             // устанавливаем флаг для читабельного вывода XML в JAXB
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
             // маршаллинг объекта в файл
-            marshaller.marshal(train, new File(filePath));
+            marshaller.marshal(train, file1);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
