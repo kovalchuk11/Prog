@@ -14,9 +14,10 @@ import java.util.Date;
 
 public class SeachXML {
     public static void main(String[] args) {
+        String fileName = "C:\\Users\\I\\Documents\\progKiev\\Prog\\src\\u2Home\\task1\\Trains.xml";
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("C:\\Users\\I\\Documents\\progKiev\\Prog\\src\\u2Home\\task1\\Trains.xml");
+            Document document = documentBuilder.parse(fileName);
 
             try {
                 printCost(document);
