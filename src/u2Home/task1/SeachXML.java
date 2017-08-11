@@ -25,7 +25,7 @@ public class SeachXML {
         String file = "C:\\Users\\I\\Documents\\progKiev\\Prog\\src\\u2Home\\task1\\Trains.xml";
         trainList.addList(new Train(1, "Ніжин", "Kiiv", "19.12.2017", "18:39"));
         trainList.addList(new Train(2, "Хмільник", "Kiiv", "18.12.2017", "18:39"));
-        trainList.addList(new Train(3, "Mosk", "Kiiv", "19.12.2017", "15:39"));
+        trainList.addList(new Train(3, "Mosk", "Kiivf", "19.12.2017", "15:39"));
         convertObjectToXml(trainList, file);
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
