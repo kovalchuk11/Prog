@@ -1,9 +1,9 @@
 package u2Home.task2;
 
 public class Address {
-    public String country;
-    public String city;
-    public String street;
+    private String country;
+    private String city;
+    private String street;
     @Override
     public String toString() {
         return "\n\t\tCountry: " + country + "\n" +

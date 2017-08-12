@@ -3,11 +3,11 @@ package u2Home.task2;
 import java.util.Arrays;
 
 public class JSON {
-    public String name;
-    public String surname;
-    public String[] phones;
-    public String[] sites;
-    public Address address ;
+    private String name;
+    private String surname;
+    private String[] phones;
+    private String[] sites;
+    private Address address ;
     @Override
     public String toString() {
         return  "Name: " + name + "\n" +
